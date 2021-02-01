@@ -1,0 +1,156 @@
+body {
+    font-size: 1.125rem;
+    font-family: 'Ubuntu', sans-serif;
+    color: #707070;
+    margin: 0;
+}
+
+/* ================================= */
+/* Typography */
+/* ================================= */
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+    margin: 0;
+}
+
+.subtitle {
+    font-weight: 700;
+    color: #1792d2;
+    font-size: .75em;
+    margin: 0;
+}
+
+h1 span {
+    color: yellowgreen;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+/* ================================= */
+/*  Layout  */
+/* ================================= */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background: #f8f8f8;
+    padding: 2em 0;
+}
+
+@media (max-width: 900px) {
+    .container-nav {
+        flex-direction: column;
+    }
+
+    header {
+        text-align: center;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 95%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.columns {
+    /* displays all the children of this parent in paralel columns */
+    display: flex;
+    /* Adds space between the columns. This space is whatever is left on the right side of the last column*/
+    justify-content: space-between;
+    /* aligns all the columns by the top side. different size of columns will not be strached out to match the largest*/
+    align-items: flex-start;
+    margin: 1em 0;
+}
+
+.col-bg {
+    background: #212614;
+    color: #ffffff;
+    padding: 1em;
+}
+
+.col-1 {
+    width: 20%;
+}
+.col-2 {
+    width: 45%;
+}
+.col-3 {
+    width: 70%;
+}
+
+/* when the screen is smaller than 600px it sets all the children in a parallel set of rows */
+@media (max-width: 800px) {
+    .columns {
+        flex-direction: column;
+    }
+
+    .col-1, .col-2, .col-3 {
+        width: 100%;
+    }
+}
+
+nav ul {
+    padding: 0;
+    /* removed the dots in front of the item */
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-left: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #707070;    
+    font-weight: 700;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #1792d2;
+}
+
+.current-page {
+    border-bottom: 1px solid #707070;
+}
+
+.current-page:hover {
+    color: #707070;
+}
+
+@media (max-width: 900px) {
+   nav ul {
+       flex-direction: column;
+   }
+
+   nav li {
+       margin: .5em 0;
+       justify-content: left;
+   }
+}

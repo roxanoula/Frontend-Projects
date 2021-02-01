@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 1rem;
+    color: #404040;
+    text-align: center;
+}
+
+
+/* =================
+   Typography 
+   ================= */
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: black;
+    order: 1;
+    margin: 0;
+}
+
+h1 + p {
+    color: darkblue;
+    font-weight: 900;
+    font-size: 1.3125rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    order: 2;
+    margin 0;
+}
+
+h2 {
+    font-size: 1.3125rem;
+    margin: 0;
+}
+
+h2 + p {
+    font-weight: 900;
+    color: #F18119;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.top-text {
+    font-size: 0.625rem;
+    color: darkblue;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    order: 0;
+    border-top: 5px solid darkblue;
+    padding-top: 2px;
+    margin: 0;
+}
+
+.fine-print {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+
+strong { font-weight: 900; }
+
+
+/* =================
+   Intro section 
+   ================= */
+   
+.intro {
+    background-color: #404040;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/foster-lake.jpg);
+    background-blend-mode: screen;
+    padding: 0 .5em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-content {
+    padding: 2em 1em;
+}
+
+.info-collector {
+    width: 60%;
+    max-width: 200px;
+}
+
+input,
+button {
+    width: 100%;
+    border-radius: 5px;
+}
+
+input {
+    /*border: 0;*/
+    font-family: inherit;
+    text-align: inherit;
+    margin-bottom: .75em;
+    padding: .25em;
+    border: 1px solid #404040;
+    padding: .25em;
+}
+
+button {
+    display: inline-block;
+    padding: .5em 1.5em;
+    font-size: 0.700em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-register {
+    transform: scale(1);
+    background: linear-gradient(to right, #ffa51d, #ff713b);
+    color: white;
+    transition: transform 500ms;
+}
+
+.btn-register:hover,
+.btn-register:focus {
+    transform: scale(1.12);
+    color: black;
+}
+
+@media (min-width: 700px) {
+    body {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.125rem;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2,
+    h1 + p {
+        font-size: 1.75rem;
+    }
+    .intro,
+    .main-content {
+        width: 50%;
+        min-height: 100vh;
+    }
+
+    /* everything that is a direct child of class .intro */
+    /* .intro * means anything that is a child of element with class intro*/
+    .intro > *,
+    .main-content > * {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
