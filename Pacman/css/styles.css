@@ -1,0 +1,180 @@
+html, body {
+    margin: 0 auto;
+}
+
+/*
+*       HTML ELEMENTS
+*/
+
+table, td, th {
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+button {
+    width: 420px;
+    margin-top: 2em;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 1em 1.5em;
+    font-size: 0.700em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: greenyellow;
+}
+
+/*
+*   CONTAINER CLASSES
+*/
+
+.container {
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/pacman.jpg);
+    background-blend-mode: screen;
+
+    display: flex;
+    flex-direction: column;
+    line-height: 50%;
+    justify-content: space-evenly;
+}
+
+.title {
+    background-color: lightgray;
+    text-align: center;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+    padding: 0 2em;
+    min-width: 400px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    max-width: 420px;
+    min-width: 420px;
+    height: 420px;
+    border: solid black;
+}
+
+.grid div {
+    width: 15px;
+    height: 15px;  
+    color: white; 
+}
+
+.score {
+    width: 30%;
+    padding: 20px 10px;
+    border: solid 5px green;
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+
+
+.btn {
+    position: relative;
+    align-items: center;
+}
+
+
+
+#startBtn {
+    transform: scale(1);
+    transition: transform 500ms;
+    letter-spacing: 1px;
+   
+}
+
+
+#startBtn:hover {
+    transform: scale(1.12);
+    color: black;
+}
+
+
+/*
+*       TYPOGRAPHY
+*/
+
+h1 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+
+
+/*
+    Pacman board details
+*/
+
+.pac-dot {
+    background-color: green;
+    border: 5px solid white;
+    box-sizing: border-box;
+}
+
+.wall {
+    background-color: gray;
+}
+
+.power-pellet {
+    background-color: green;
+    border-radius: 7.5px;
+}
+
+.pacman {
+    background-color: orange;
+    border-radius: 7.5px ;
+    border: none;
+}
+
+.ghost-lair {
+    background-color: white;
+}
+
+.empty {
+    background-color: white;
+}
+
+/*
+    GHOSTS
+*/
+.blinky {
+    background-color: red;
+    border: none;
+}
+.pinky {
+    background-color: pink;
+    border: none;
+}
+.inky {
+    background-color: purple;
+    border: none;
+}
+.clyde {
+    background-color: yellow;
+    border: none;
+}
+.scared-ghost {
+    background-color: blue;
+    border: none;
+}
