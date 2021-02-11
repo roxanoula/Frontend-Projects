@@ -3,6 +3,28 @@ body {
     padding: 0;
 }
 
+header {
+    padding: 10px 0;
+    margin: 0 auto;
+    background: lightgray;
+    color: black;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+table, td, th {
+    border: 1px solid black;
+  }
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
 .container {
     width: 100px;
     position:relative;
@@ -28,27 +50,6 @@ body {
     border: solid 10px green;
     display: inline-block;
     position: absolute;
-}
-
-table, td, th {
-    border: 1px solid black;
-  }
-  
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-header {
-    padding: 10px 0;
-    margin: 0 auto;
-    background: yellowgreen;
-    color: black;
-}
-
-h1 {
-    font-size: 36px;
-    text-align: center;
 }
 
 .grid {

@@ -11,7 +11,7 @@ const layout = [
     1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,
     1,1,1,1,1,1,0,1,1,1,1,1,0,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,
     1,1,1,1,1,1,0,1,1,4,4,4,4,4,4,4,4,4,4,1,1,0,1,1,1,1,1,1,
-    1,1,1,1,1,1,0,1,1,4,1,1,1,2,2,1,1,1,4,1,1,0,1,1,1,1,1,1,
+    1,1,1,1,1,1,0,1,1,4,1,1,2,2,2,2,1,1,4,1,1,0,1,1,1,1,1,1,
     1,1,1,1,1,1,0,1,1,4,1,2,2,2,2,2,2,1,4,1,1,0,1,1,1,1,1,1,
     4,4,4,4,4,4,0,0,0,4,1,2,2,2,2,2,2,1,4,0,0,0,4,4,4,4,4,4,
     1,1,1,1,1,1,0,1,1,4,1,2,2,2,2,2,2,1,4,1,1,0,1,1,1,1,1,1,
@@ -35,6 +35,7 @@ const keyDown = 40
 const keyUp = 38
 const keyLeft = 37
 const keyRight = 39
+const keyMovement = new Set([keyLeft, keyRight, keyUp, keyDown])
 const moveUp = -width
 const moveDown = +width
 const moveLeft = -1
@@ -135,6 +136,8 @@ function clearBoard() {
 }
 
 function controlMove(e) {
+    if (!keyMovement.has(e.keyCode)) return
+
     removeClassFromSquare('pacman', pacmanIndex)
     switch(e.keyCode) {
         case keyDown: 
@@ -323,5 +326,19 @@ function computeMinScore() {
 
 restartGame()
 
-document.addEventListener('keyup', controlMove)
+function preventDefault(e) {
+    e.preventDefault();
+  }
+  
+  function preventDefaultForScrollKeys(e) {
+    if (keyMovement.has(e.keyCode)) {
+      preventDefault(e);
+      return false;
+    }
+  }
+
+document.addEventListener('keyup', function(event) {
+    window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+    controlMove(event)
+})
 startBtn.addEventListener('click', restartGame)
