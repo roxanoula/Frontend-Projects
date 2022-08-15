@@ -1,0 +1,10 @@
+.my-colors {
+    display: flex;
+    height: 80vh;
+    flex-wrap: wrap;    
+}
+
+.my-color {
+    height: 20%;
+    width: 20%;
+}

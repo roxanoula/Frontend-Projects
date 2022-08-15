@@ -1,0 +1,38 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #555;
+    background: #333;
+    margin: 3em;
+}
+
+.portfolio {
+    padding: 1em;
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    /* replace 3 with auto-fill to adjust the number of colums changing based on the size of the screen*/
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-areas: "title title title"
+    "project project project";
+    grid-gap: 1em 2em;
+}
+
+.portfolio-title {
+    text-align: center;
+    color: #00C896;
+    grid-area: title;
+}
+
+img {
+    max-width: 100%;
+}
+
+.portfolio-card {
+    box-shadow: 0 0 1em rgba(0,0,0,.25);
+    padding: 1em;
+    background: white;
+}
+
+.portfolio-card-title {
+    font-size: 1.5rem;
+    color: #000;
+}
