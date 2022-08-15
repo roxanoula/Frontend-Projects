@@ -1,5 +1,7 @@
 html, body {
     margin: 0 auto;
+    max-width: 80%;
+    min-width: 900px;
 }
 
 /*
@@ -37,16 +39,11 @@ button {
 */
 
 .container {
-    background-color: black;
-    background-size: cover;
-    background-position: center;
-    background-image: url(../images/pacman.jpg);
-    background-blend-mode: screen;
-
     display: flex;
     flex-direction: column;
     line-height: 50%;
     justify-content: space-evenly;
+    margin: 0 auto;
 }
 
 .title {
@@ -55,9 +52,16 @@ button {
 }
 
 .game {
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/pacman.jpg);
+    background-blend-mode: screen;
+
     display: flex;
     flex-direction: row;
-    padding: 0 2em;
+    align-items: flex-start;
+    padding: 1em 2em;
     min-width: 400px;
 }
 
@@ -79,8 +83,8 @@ button {
 
 .score {
     width: 30%;
-    padding: 20px 10px;
-    border: solid 5px green;
+    padding: 0 10px;
+    
     color: white;
     display: inline-block;
     position: relative;
@@ -90,9 +94,9 @@ button {
 .btn {
     position: relative;
     align-items: center;
+    background-color: black;
+    margin: 0 auto;
 }
-
-
 
 #startBtn {
     transform: scale(1);
@@ -107,7 +111,11 @@ button {
     color: black;
 }
 
-
+.footer {
+    background-color: lightgray;
+    height: 10vh;
+    align-items: center;
+}
 /*
 *       TYPOGRAPHY
 */
